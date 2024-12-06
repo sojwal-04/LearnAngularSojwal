@@ -1,1 +1,45 @@
 <p>ng-if works!</p>
+
+<div>
+  <div class="mt-4 flex justify-center gap-4">
+    <button
+      type="button"
+      class="px-4 py-2 bg-green-800 rounded-md text-white"
+      (click)="handleDivVisibility(true)"
+    >
+      Show
+    </button>
+    <button
+      type="button"
+      class="px-4 py-2 bg-red-800 rounded-md text-white"
+      (click)="handleDivVisibility(false)"
+    >
+      Hide
+    </button>
+  </div>
+  <div
+    class="mt-4 bg-green-500 text-white w-40 mx-auto px-4 py-2 text-center"
+    *ngIf="showDiv"
+  >
+    Div one
+  </div>
+
+  <br />
+
+  <br />
+  <div class="mt-4 flex justify-center gap-4">
+    <input class="border-black border" type="text" [(ngModel)]="firstNum"  placeholder="Enter firstNum"/>
+    <input class="border-black border" type="text" [(ngModel)]="secondNum"  placeholder="Enter secondNum"/>
+
+
+
+    
+  </div>
+
+  <div
+    class="mt-4 bg-red-500 text-white w-auto max-w-[600px] mx-auto px-4 py-2 text-center"
+    *ngIf="firstNum == secondNum"
+  >
+    Showing div if firstNum == secondNum of input
+  </div>
+</div>
