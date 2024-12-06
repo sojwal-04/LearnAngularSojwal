@@ -1,0 +1,33 @@
+<div>
+    <form action="">
+
+      <p>Your montly slaalry is {{monthlySalary}}</p>
+      <div>
+        <label for="name" class="font-bold">Name:</label>
+        <input class="outline-none border-black border-2" type="text" name="name" id="name" [(ngModel)]="userName">
+      </div>
+
+      <br>
+      <div>
+        <label for="present-days" class="font-bold">Present Days</label>
+        <input class="outline-none border-black border-2" type="numbe" name="workingDays" id="working-days" [(ngModel)]="presentDays"  (input)="updateMonthlySalary()">
+      </div>
+
+      <br>
+      <div>
+        <label for="daily-salary" class="font-bold">Daily Salary</label>
+        <input class="outline-none border-black border-2" type="number" name="dailySalary" id="daily-salary" [(ngModel)]="dailySalary" (input)="updateMonthlySalary()">
+      </div>
+
+      <br>
+      <div>
+        <label for="monthly-salary" class="font-bold">MonthlySalary</label>
+        <input class="outline-none border-black border-2" type="text" name="monthlySalary" id="monthly-salary" [(ngModel)]="monthlySalary" readonly>
+      </div>
+
+      <div class="text-center">
+
+        <button type="button" class="px-4 py-2 bg-purple-900 text-white rounded-md" (click)="handleSubmitButtonClick()">Submit</button>
+      </div>
+    </form>
+</div>
