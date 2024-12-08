@@ -1,0 +1,40 @@
+<div class="hidden border-2 px-4 py-8">
+  <h4 class="text-center font-bold">About ngClass Directive</h4>
+
+  <!-- First example -->
+  <div
+    [ngClass]="{
+      'bg-green-300': showGreenColor,
+      'bg-red-200': !showGreenColor
+    }"
+    class="w-[600px] h-20"
+  ></div>
+
+  <button
+    type="button"
+    class="px-4 py-2 rounded-md bg-purple-800 text-white"
+    (click)="handleToggleColor()"
+  >
+    Toggle
+  </button>
+
+  <!-- Second example -->
+  <hr class="py-1 my-4 bg-black" />
+
+  <h4>Example 2</h4>
+  <div [ngClass]="divTwoBGColor" class="h-20 w-[400px]">Div 2</div>
+
+  <button
+    class="px-4 py-2 rounded-md bg-green-800 text-white"
+    type="button"
+    (click)="handleAddDivTwoColor('bg-green-800')"
+  >
+    Add Green
+  </button>
+  <button
+    class="px-4 py-2 rounded-md bg-yellow-800 text-white"
+    (click)="handleAddDivTwoColor('bg-yellow-800')"
+  >
+    Add yewllow
+  </button>
+</div>
