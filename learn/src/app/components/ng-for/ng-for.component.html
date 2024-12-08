@@ -1,1 +1,13 @@
-<p>ng-for works!</p>
+<p>Showing citylist using ngFor</p>
+<ul class="flex flex-col gap-4 justify-center items-center">
+  <li
+    class="px-4 py-2 bg-emerald-800 text-white w-40"
+    *ngFor="let city of cityList; let i = index"
+  >
+    {{ i + 1 }}. {{ city }}
+  </li>
+</ul>
+
+<select name="employee" id="employee" class="border-black  my-6">
+  <option class="text-orange-800" *ngFor="let employee of employees" [value]="employee.id">{{employee.name}} - {{employee.email}}</option>
+</select>
