@@ -1,0 +1,30 @@
+<div class="border-black rounded-md">
+  <p>ng-style works!</p>
+
+  <div class="border-black border-2 p-4">
+    <div class="mt-4">
+      <div
+        class="h-20 w-[800px] border-black"
+        [ngStyle]="{ 'background-color': bgColor }"
+      ></div>
+
+      <button class="px-4 py-2 bg-green-600" (click)="handleAddColor('green')">
+        Add Green
+      </button>
+      <button class="px-4 py-2 bg-red-500" (click)="handleAddColor('red')">
+        Add Red
+      </button>
+    </div>
+
+    <div class="mt-4">
+      <div class="w-[900px] h-20" [ngStyle]="{'background-color' : isChecked ? 'teal' : 'green'}"></div>
+
+      <input type="checkbox" [(ngModel)]="isChecked">
+    </div>
+  </div>
+
+
+  <div class="mt-4">
+    <div [style]="ngCss"></div>
+  </div>
+</div>
