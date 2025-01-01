@@ -1,0 +1,64 @@
+<h1 class="text-center text-2xl">This is my counter app</h1>
+
+<div class="flex flex-col items-center justify-center gap-4">
+  <div class="bg-black/70 text-white w-40 p-2 text-center rounded-md font-bold">
+    {{ counter }}
+  </div>
+
+  <div class="flex items-center justify-center gap-4">
+    <button
+      class="bg-green-600 text-white px-4 py-2 rounded-md"
+      (click)="setCounter(counter + 1)"
+    >
+      Increment Count
+    </button>
+    <button
+      class="bg-red-600 text-white px-4 py-2 rounded-md"
+      (click)="setCounter(counter - 1)"
+    >
+      Decrement Count
+    </button>
+  </div>
+</div>
+
+<div class="mt-4">
+  <h1 class="font-bold text-center text-4xl">
+    Will learn to fetch data from here
+  </h1>
+
+  <button
+    type="button"
+    (click)="handleFetchProducts($event)"
+    class="font-bold px-4 py-2 bg-emerald-500 text-white block mx-auto"
+  >
+    Fetch products
+  </button>
+
+  <div class="container mx-auto px-5">
+    <ul *ngIf="products.length > 0" class="grid grid-cols-8 gap-8">
+      <li *ngFor="let product of products">
+        <div class="productItem border rounded-md overflow-hidden">
+          <div class="h-40 bg-green-400">
+            <img class="w-full h-full" src="{{ product.image }}" alt="" />
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <h1 class="font-bold text-black">{{ product?.title }}</h1>
+            @if(product?.price > 50){
+            <p class="text-green-500">{{ product?.price }}</p>
+            }@else {
+            <p class="text-red-500">{{ product?.price }}</p>
+            }
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    @for(city of cities; track $index ){
+    <div>{{ city }} {{ $index + 1 }} / {{ $count }}</div>
+    }@empty {
+    <div>Sorry nothing found</div>
+    }
+  </div>
+</div>
