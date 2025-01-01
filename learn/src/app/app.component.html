@@ -1,34 +1,25 @@
 <main class="main">
+  <nav class="border-b-2">
+    <div class="container mx-auto px-12">
+      <ul class="links py-4 w-full flex items-center justify-end gap-4">
 
+        <li>
+          <a class="font-bold" routerLink="/">Home</a>
+        </li>
+        <li>
+          <a class="font-bold" routerLink="/admin">Admin</a>
+        </li>
 
-  <!-- Api component -->
-  <app-api>
-  </app-api>
+        <li>
+          <a class="font-bold" routerLink="/user">User</a>
+        </li>
 
-
-
-
-  <!-- Other -->
-  <div class="hidden">
-    <div class="text-red-500 text-center text-4xl font-extrabold">
-      Tailwind is added bro
+        <li>
+          <a class="font-bold" routerLink="/api">API</a>
+        </li>
+      </ul>
     </div>
-
-    <app-user></app-user>
-
-    <app-admin></app-admin>
-
-    <div class="hidden border-black rounded-md">
-      <p>We will learn how to dyanmically hide or show div</p>
-
-      <app-ng-if></app-ng-if>
-
-      <app-ng-for></app-ng-for>
-    </div>
-
-    <app-ng-class></app-ng-class>
-    <app-ng-style></app-ng-style>
-  </div>
+  </nav>
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
